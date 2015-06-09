@@ -1,0 +1,32 @@
+{% extends "public/base.html" %}
+
+<head>
+    <title>{% block title %}INE Tunnel Information{% endblock %}</title>
+
+    {% block head %}{% endblock %}
+</head>
+
+
+{% block content %}
+
+<h2>Tunnel Information</h2>
+
+
+
+			<h3>Current Certificate:</h3>
+			<h6> {{key}} <h6>
+			<br>
+
+
+			<h3>JSON String:</h3> 
+			["com::saife::crypto::capability::AES_128_BIT", "com::saife::crypto::capability::AES_256_BIT", "com::saife::vpn::l3::client"] <br><br>
+
+
+	<button class="btn btn-primary" onclick="document.location.reload(true)"><span  class="glyphicon glyphicon-refresh"></span>  Refresh</button>
+
+	<a href="/log" class="btn btn-primary" role="button" download>Download Log</a>
+
+
+
+
+{% endblock %}

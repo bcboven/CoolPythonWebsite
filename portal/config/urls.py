@@ -14,6 +14,32 @@ urlpatterns = patterns('',
     #Home Page
     (r'^home/?$', views.home),
 
+    #Wireless Page
+    (r'^APconfig/?$', views.APconfig),
+
+    #Certificate Configuration Page
+    (r'^tunnel/?$', views.tunnel),
+
+    #Connections Pages
+    (r'^connections/?$', views.connections),\
+
+    #Connections Pages
+    (r'^advance/?$', views.advance),
+
+    #view logs
+    (r'^log/?$', views.getlog),
+
+    #enable saife connect
+    (r'^enable/?$', views.enable),
+
+    #enable saife connect
+    (r'^disable/?$', views.disable),
+
+    #enable passthrough
+    (r'^passthrough/?$', views.passthrough),
+
+
+
 
 )
 

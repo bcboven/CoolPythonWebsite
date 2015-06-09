@@ -1,0 +1,66 @@
+{% extends "public/base.html" %}
+
+<head>
+    <title>{% block title %}INE Access Point Configuration{% endblock %}</title>
+
+    {% block head %}{% endblock %}
+</head>
+
+
+{% block content %}
+
+<h2>Wireless Access Point Configuration</h2>
+
+
+<h1>{{ question.question_text }}</h1>
+
+
+<form action="/APconfig/" method="post">{% csrf_token %}
+SSID:
+<input type="text" class="form-group" value="Saife-INE" name="ssid"><br>
+Passphrase:
+<input type="text" class="form-group" value="Saife-INE" name="passwds"><br>
+Channel:
+<select class="form-group" name="chan">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+      </select>
+
+<br>
+Security Type:
+<select class="form-group" name="secType">
+        <option>WPA</option>
+        <option>WPA2</option>
+        <option>WPA+WPA2</option>
+      </select><br>
+Encryption Type:
+ <select class="form-group" name="encrypt">
+        <option>TKIP</option>
+        <option>CCMP</option>
+        <option>TKIP+CCMP</option>
+      </select><br>
+
+
+<input type="submit" class="btn btn-primary" value="Save Settings" />
+
+</form>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

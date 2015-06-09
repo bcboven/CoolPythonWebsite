@@ -1,0 +1,21 @@
+{% extends "public/base.html" %}
+
+<head>
+    <title>{% block title %}INE-Advance Settings{% endblock %}</title>
+
+    {% block head %}{% endblock %}
+</head>
+
+
+{% block content %}
+
+<h2>Advance Settings</h2>
+<br>
+<h3>Reprovison</h3>
+<a href="/passthrough" class="btn btn-danger" role="button" >Reprovison</a>
+<h3>Restore Default Settings</h3>
+<a href="/passthrough" class="btn btn-danger" role="button" >Restore Default Settings</a>
+
+
+
+{% endblock %}

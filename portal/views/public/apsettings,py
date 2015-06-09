@@ -1,0 +1,3 @@
+def makehostapdfile(ssid, passphrase, channel, file):
+	with open(file, "a") as myfile:
+    myfile.write("this is a test")

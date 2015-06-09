@@ -3,32 +3,16 @@
 {% block content %}
 <h1>Home Page</h1>
 
-{% if email %}
-	<div class="well">{{email}}</div>
-{% else %}
-	<h3>Please Enter an email</h3>
-{% endif %}
+<div class="well">{{ssid}}</div>
 
-<form method="POST">
-	{% csrf_token %}
-	<label>Email</label>
-	<input type="text" name="email">
 
-	<button>Submit</button>
-
+<form action="/your-name/" method="post">
+    <label for="your_name">Your name: </label>
+    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+    <input type="submit" value="OK">
 </form>
 
-{% for car in cars %}
-	<p style="color:{{car.color}}">
-		Car Name: {{car.name}}
-	</p>
-	
-	<script type="text/javascript">
-	 alert('{{car.color}}');
-	</script>
 
-
-{% endfor %}
 
 
 

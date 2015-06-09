@@ -1,0 +1,47 @@
+{% extends "public/base.html" %}
+
+<head>
+    <title>{% block title %}INE-Connection Information{% endblock %}</title>
+
+    {% block head %}{% endblock %}
+</head>
+
+
+{% block content %}
+
+<h1>Connection Information</h1>
+	
+
+		<h3>Interface Name : WAN</h3> 
+		IP Address : {{statsAll.eth0.ip}} <br />
+		Subnet Mask : {{statsAll.eth0.subnet}} <br />
+		Mac Address : {{statsAll.eth0.mac}} <br /><br />
+		<div class="intheader">Interface Statistics:</div>
+		Received Packets : {{statsAll.eth0.rx}}<br />
+		Transferred Packets : {{statsAll.eth0.tx}}<br />
+		<br />
+
+		<h3>Interface Name : WAN</h3> 
+		IP Address : {{statsAll.cectun.ip}} <br />
+		Subnet Mask : {{statsAll.cectun.subnet}} <br />
+		Mac Address : {{statsAll.cectun.mac}} <br /><br />
+		<div class="intheader">Interface Statistics:</div>
+		Received Packets : {{statsAll.cectun.rx}}<br />
+		Transferred Packets : {{statsAll.cectun.tx}}<br />
+		<br />
+
+		<h3>Interface Name : WAN</h3> 
+		IP Address : {{statsAll.wlan0.ip}} <br />
+		Subnet Mask : {{statsAll.wlan0.subnet}} <br />
+		Mac Address : {{statsAll.wlan0.mac}} <br /><br />
+		<div class="intheader">Interface Statistics:</div>
+		Received Packets : {{statsAll.wlan0.rx}}<br />
+		Transferred Packets : {{statsAll.wlan0.tx}}<br />
+		<br />
+
+
+		<button class="btn btn-primary" onclick="document.location.reload(true)"><span  class="glyphicon glyphicon-refresh"></span>  Refresh</button>
+	
+
+
+{% endblock %}
